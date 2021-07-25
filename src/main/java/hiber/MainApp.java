@@ -35,7 +35,7 @@ public class MainApp {
          System.out.println();
       }
 
-      userService.getUserByModelAndSeriesCar("Самсунг см3", 2012);
+      System.out.println(userService.getUserByModelAndSeriesCar("Ауди С8", 2020));
 
       context.close();
    }

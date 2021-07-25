@@ -28,13 +28,12 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public void getUserByModelAndSeriesCar(String model, int series) {
-      String hql = "SELECT car FROM Car car WHERE car.model=:model AND car.series=:series";
+   public User getUserByModelAndSeriesCar(String model, int series) {
+      String hql = "FROM Car WHERE model=:model AND series=:series";
       Car car = sessionFactory.getCurrentSession().createQuery(hql, Car.class)
               .setParameter("model", model)
               .setParameter("series", series).uniqueResult();
-      User user = car.getUser();
-      System.out.println(user);
+      return car.getUser();
     }
 
 }
