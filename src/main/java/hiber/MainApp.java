@@ -35,7 +35,7 @@ public class MainApp {
          System.out.println();
       }
       // Получаем владельца автомобиля по серии и модели
-      System.out.println(userService.getUserByModelAndSeriesCar("Ауди С8", 2020));
+      System.out.println(userService.getUserByModelAndSeriesCar("Газ Волга Сибер", 2008));
 
       context.close();
    }
